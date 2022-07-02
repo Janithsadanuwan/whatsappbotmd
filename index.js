@@ -1,9 +1,5 @@
 /*
-Manoj Md Whatsapp Bot
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-Coded By Ravindu Manoj
+
 */
 return
 const Analyze = require('./store/Analyze')
@@ -15,7 +11,7 @@ const {
 async function startManojMdWhatsappBot() {
 	var condb = RaviCLI.loder('Loging To DataBase...'),
 		isconnect = await connectDb(condb, process.env.DBURI || false),
-		session_update = await decryptManojMultiDeviceSession(process.env.SESSION || false)
+		session_update = await decryptJanithMultiDeviceSession(process.env.SESSION || false)
 	await sleep()
 	var condc = RaviCLI.loder('Updating DataBase...'),
 		isupdated = await database.update()

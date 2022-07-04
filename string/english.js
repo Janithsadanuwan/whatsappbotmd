@@ -575,6 +575,16 @@ var string = {
 				done: '*Manoj Multi-device Whatsapp Bot Started Successfull!*'
 			}
 		},
+	stick_cmd: {
+		desc: 'Convert Sticker To Command',
+		help: 'stickcmd mute',
+		need: '*Reply To A Sticker*',
+		needc: '*Use Like This => .stickcmd mute*',
+		done: '*Successfully created. Now You can use sticker for active {} command*',
+		rem_desc: 'Remove Sticker Command From List',
+		rem_no: '*No Saved Commands!*',
+		rem_done: '*Successfully Removed {} From The List!*',
+	},
 		sticker: {
 			desc: 'It converts your replied or used photo or video or gif to sticker.',
 			help: '.sticker packname/author',

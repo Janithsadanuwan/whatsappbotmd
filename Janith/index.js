@@ -1,9 +1,6 @@
+/* 
 
-/*
-dragonx md multi device whatsapp bot
-coded by janithsadanuwan
 */
-
 module.exports = {
 	add: {
 		command: [ "add", "ගන්න" ],
@@ -556,6 +553,21 @@ module.exports = {
 		desc: string().admin.revoke.desc,
 		react: "🔖"
 	},
+	rgb: {
+		command: [ "rgb" ],
+		type: type_bot,
+		category: "sticker",
+		desc: string().attp.rgb_desc,
+		help: "rgb example",
+		react: "🌈"
+	},
+	rmstickcmd: {
+		command: [ "rmstickcmd" ],
+		type: "private",
+		category: "profile",
+		desc: string().stick_cmd.rem_desc,
+		react: "👑"
+	},
 	scam: {
 		command: [ "scam" ],
 		type: "private",
@@ -625,6 +637,13 @@ module.exports = {
 		category: "profile",
 		desc: string().start.start.desc,
 		react: "✅"
+	},
+	stickcmd: {
+		command: [ "stickcmd" ],
+		type: "private",
+		category: "profile",
+		desc: string().stick_cmd.desc,
+		react: "👑"
 	},
 	sticker: {
 		command: [ "sticker", "ස්ටිකර්", "stikar" ],
@@ -834,4 +853,3 @@ module.exports = {
 		type: "dual"
 	}
 }
-

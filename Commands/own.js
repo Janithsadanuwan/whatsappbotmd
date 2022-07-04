@@ -1,41 +1,35 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-Manoj.dp.start = async(core) => {
+Janith.dp.start = async(core) => {
 	var dl = await core.download()
 	if(dl.type !== 'image') {
 		return await core.send(string().own.dp.need)
 	}
 
 	var up = await core.send(string().own.dp.up)
-	fs.writeFileSync('./manoj-prop.png', dl.buffer)
+	fs.writeFileSync('./Janith-prop.png', dl.buffer)
 	await core.profileUpdate({
 		dothis: 'up-dp',
-		url: './manoj-prop.png',
+		url: './Janith-prop.png',
 		user: core.me
 	})
 	await core.send(string().own.dp.upd)
-	removefile('./manoj-prop.png')
+	removefile('./Janith-prop.png')
 	return await core.delete(up)
 }
 
-Manoj.setabout.start = async(core) => {
+Janith.setabout.start = async(core) => {
 	if(!core.text) {
 		await core.reply(string().own.about.need)
 	}
 
-	await core.manoj.updateAbout(core.text)
+	await core.Janith.updateAbout(core.text)
 	await core.reply(string().own.about.done)
 }
 
 
-Manoj.comm.start = async(core) => {
+Janith.comm.start = async(core) => {
 	if(!core.input.have('/') || !core.input.have('@g.us')) {
 		return await core.send(string().own.comm.need)
 	}
@@ -65,7 +59,7 @@ Manoj.comm.start = async(core) => {
 	})
 }
 
-Manoj.diff.start = async(core) => {
+Janith.diff.start = async(core) => {
 	if(!core.input.have('/') || !core.input.have('@g.us')) {
 		return await core.send(string().own.comm.need)
 	}
@@ -95,7 +89,7 @@ Manoj.diff.start = async(core) => {
 	})
 }
 
-Manoj.block.start = async(core) => {
+Janith.block.start = async(core) => {
 	var user = core.Reply ? core.Reply.jid : core.mention ? core.mention[0] : core.isgroup ? false : core.jid
 	if(!user) {
 		return await core.send(string().admin.need_us)
@@ -108,7 +102,7 @@ Manoj.block.start = async(core) => {
 	})
 }
 
-Manoj.unblock.start = async(core) => {
+Janith.unblock.start = async(core) => {
 	var user = core.Reply ? core.Reply.jid : core.mention ? core.mention[0] : core.isgroup ? false : core.jid
 	if(!user) {
 		return await core.send(string().admin.need_us)
@@ -121,7 +115,7 @@ Manoj.unblock.start = async(core) => {
 	return await core.send((dataDb.UnBlock || string().own.unblock.done).setup(core))
 }
 
-Manoj.join.start = async(core) => {
+Janith.join.start = async(core) => {
 	if(!core.input.have('chat.whatsapp.com/')) {
 		return await core.send(string().own.join.need)
 	}
@@ -137,7 +131,7 @@ Manoj.join.start = async(core) => {
 	}
 }
 
-Manoj.left.start = async(core) => {
+Janith.left.start = async(core) => {
 	if(!core.isgroup) {
 		return
 	}

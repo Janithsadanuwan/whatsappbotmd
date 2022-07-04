@@ -1,16 +1,10 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 
-const { Facebook, Twitter, Instagram, mediafire, gitclone, googleImage, tiktoklink, tiktokDownload, truecaller, googleDrive, PDFMaker, patchNovels } = Ravindu
+const { Facebook, Twitter, Instagram, mediafire, gitclone, googleImage, tiktoklink, tiktokDownload, truecaller, googleDrive, PDFMaker, patchNovels } = Janith 
 
-Manoj.insta.start = async(core) => {
+Janith.insta.start = async(core) => {
 	var instavid = /(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/, instastory = /\/stories\/([^\s&]+)/
 	var { url, type } = core.input && instavid.test(core.input) ? { url:core.input, type:'vid' } : core.input && instastory.test(core.input) ? { url:core.input, type:'story' } : { url:false, type:false }
 	if(!url) {
@@ -32,7 +26,7 @@ Manoj.insta.start = async(core) => {
 	}
 }
 
-Manoj.gimg.start = async(core) => {
+Janith.gimg.start = async(core) => {
 	if(!core.input) {
 		return await core.reply(string().gimg.need)
 	}
@@ -63,7 +57,7 @@ Manoj.gimg.start = async(core) => {
 	}
 }
 
-Manoj.instastory.start = async(core) => {
+Janith.instastory.start = async(core) => {
 	if(core.input && core.input.have('/%-/')) {
 		core.input.cut('/%-/').fix().map(async a => {
 			await core.mediasend(a.cut('/%=/')[0], a.cut('/%=/')[1])
@@ -105,7 +99,7 @@ Manoj.instastory.start = async(core) => {
 	}
 }
 
-Manoj.fb.start = async(core) => {
+Janith.fb.start = async(core) => {
 	var url = Facebook.urlvalidate(core.input)
 	if(!url) {
 		return await core.reply(string().fb.need)
@@ -128,7 +122,7 @@ Manoj.fb.start = async(core) => {
 	}
 }
 
-Manoj.mfire.start = async(core) => {
+Janith.mfire.start = async(core) => {
 	var url = core.input && /https:\/\/www.mediafire.com/.test(core.input) ? core.input : false
 	if(!url) {
 		return await core.reply(string().mfire.need)
@@ -153,7 +147,7 @@ Manoj.mfire.start = async(core) => {
 	}
 }
 
-Manoj.gdrive.start = async(core) => {
+Janith.gdrive.start = async(core) => {
 	var url = core.input && /https:\/\/drive.google.com\/file/.test(core.input) ? core.input : false
 	if(!url) {
 		return await core.reply(string().gdrive.need)
@@ -178,7 +172,7 @@ Manoj.gdrive.start = async(core) => {
 	}
 }
 
-Manoj.tiktok.start = async(core) => {
+Janith.tiktok.start = async(core) => {
 	var url = tiktoklink(core.input)
 	if(!url) {
 		return await core.reply(string().tiktok.need)
@@ -221,7 +215,7 @@ Manoj.tiktok.start = async(core) => {
 	}
 }
 
-Manoj.gitdl.start = async(core) => {
+Janith.gitdl.start = async(core) => {
 	var url = core.input && /https:\/\/github.com/.test(core.input) ? core.input : false
 	if(!url) {
 		return await core.reply(string().gitdl.need)
@@ -247,7 +241,7 @@ Manoj.gitdl.start = async(core) => {
 	}
 }
 
-Manoj.truecaller.start = async(core) => {
+Janith.truecaller.start = async(core) => {
 	var n = getNumber(core.input)
 	if(!n) {
 		return await core.reply(string().truecaller.need)
@@ -267,7 +261,7 @@ Manoj.truecaller.start = async(core) => {
 	}
 }
 
-Manoj.twitter.start = async(core) => {
+Janith.twitter.start = async(core) => {
 	var id = Twitter.getID(core.input)
 	if(!id) {
 		return await core.reply(string().twitter.need)
@@ -299,7 +293,7 @@ Manoj.twitter.start = async(core) => {
 	}
 }
 
-Manoj.pdf.start = async(core) => {
+Janith.pdf.start = async(core) => {
 	var pdf = new PDFMaker(core)
 	switch (core.command) {
 	case 'page':
@@ -338,7 +332,7 @@ Manoj.pdf.start = async(core) => {
 	}
 }
 
-Manoj.novel.start = async(core) => {
+Janith.novel.start = async(core) => {
 	var getNovels = await patchNovels(core.input)
 	if(!getNovels.type) {
 		return await core.reply(string().novel.error)

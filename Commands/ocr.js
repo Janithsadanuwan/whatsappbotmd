@@ -1,18 +1,13 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
+Coded By Ravindu Janith
 */
 const {
 	Readimage
-} = require('../store/manoj/')
+} = require('../store/janith/')
 
 
-Manoj.ocr.start = async(core) => {
+Janith.ocr.start = async(core) => {
 	var load = await core.download()
 	if(load.type !== 'image') {
 		return await core.send(string().download.needi)

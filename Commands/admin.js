@@ -1,13 +1,7 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-Manoj.kick.start = async(core) => {
+Janith.kick.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -79,7 +73,7 @@ Manoj.kick.start = async(core) => {
 	})
 }
 
-Manoj.add.start = async(core) => {
+Janith.add.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -103,7 +97,7 @@ Manoj.add.start = async(core) => {
 	}
 }
 
-Manoj.promote.start = async(core) => {
+Janith.promote.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -126,7 +120,7 @@ Manoj.promote.start = async(core) => {
 	})
 }
 
-Manoj.demote.start = async(core) => {
+Janith.demote.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -149,7 +143,7 @@ Manoj.demote.start = async(core) => {
 	})
 }
 
-Manoj.gpdesc.start = async(core) => {
+Janith.gpdesc.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -167,7 +161,7 @@ Manoj.gpdesc.start = async(core) => {
 	return await core.delete(up)
 }
 
-Manoj.gpsub.start = async(core) => {
+Janith.gpsub.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -185,7 +179,7 @@ Manoj.gpsub.start = async(core) => {
 	return await core.delete(up)
 }
 
-Manoj.gpdp.start = async(core) => {
+Janith.gpdp.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -196,18 +190,18 @@ Manoj.gpdp.start = async(core) => {
 	}
 
 	var up = await core.send(string().admin.gpdp.up)
-	fs.writeFileSync('./manoj-group.jpg', dl.buffer)
+	fs.writeFileSync('./Janith-group.jpg', dl.buffer)
 	await core.profileUpdate({
 		dothis: 'up-dp',
-		url: './manoj-group.jpg',
+		url: './Janith-group.jpg',
 		user: core.jid
 	})
 	await core.send(string().admin.gpdp.upd)
-	removefile('./manoj-group.jpg')
+	removefile('./Janith-group.jpg')
 	return await core.delete(up)
 }
 
-Manoj.invite.start = async(core) => {
+Janith.invite.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -216,7 +210,7 @@ Manoj.invite.start = async(core) => {
 	return await core.send(string().admin.invite.link.bind(code))
 }
 
-Manoj.mute.start = async(core) => {
+Janith.mute.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -225,7 +219,7 @@ Manoj.mute.start = async(core) => {
 	return await core.send((dataDb.Mute || string().admin.mute.done).setup(core))
 }
 
-Manoj.unmute.start = async(core) => {
+Janith.unmute.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -234,7 +228,7 @@ Manoj.unmute.start = async(core) => {
 	return await core.send((dataDb.Unmute || string().admin.unmute.done).setup(core))
 }
 
-Manoj.lock.start = async(core) => {
+Janith.lock.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -243,7 +237,7 @@ Manoj.lock.start = async(core) => {
 	return await core.send((dataDb.Lock || string().admin.lock.done).setup(core))
 }
 
-Manoj.unlock.start = async(core) => {
+Janith.unlock.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}
@@ -252,7 +246,7 @@ Manoj.unlock.start = async(core) => {
 	return await core.send((dataDb.Unlock || string().admin.unlock.done).setup(core))
 }
 
-Manoj.revoke.start = async(core) => {
+Janith.revoke.start = async(core) => {
 	if(!await core.amAdmin()) {
 		return await core.send(string().admin.need_admin)
 	}

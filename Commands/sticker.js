@@ -1,15 +1,9 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-const { CanvasImage } = Ravindu
+const { CanvasImage } = Jnaith
 const { superCanvasImageEditor, getColorList } = CanvasImage
-Manoj.sticker.start = async(core) => {
+Janith.sticker.start = async(core) => {
 	var op = {}
 	if(core.input) {
 		op = core.input.includes('/') ? {
@@ -34,7 +28,7 @@ Manoj.sticker.start = async(core) => {
 }
 
 
-Manoj.stickget.start = async(core) => {
+Janith.stickget.start = async(core) => {
 	var op = {}
 	if(core.input) {
 		op = core.input.includes('/') ? {
@@ -58,7 +52,7 @@ Manoj.stickget.start = async(core) => {
 	await core.reply(string().sticker.get_need)
 }
 
-Manoj.wasted.start = Manoj.triggered.start = Manoj.jail.start = Manoj.passed.start = async(core) => {
+Janith.wasted.start = Janith.triggered.start = Janith.jail.start = Janith.passed.start = async(core) => {
 	var op = {}
 	if(core.input) {
 		op = core.input.includes('/') ? {

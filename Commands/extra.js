@@ -1,15 +1,9 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 var Url_Regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
-const { calAge, calculater } = Ravindu
-Manoj.del.start = async(core) => {
+const { calAge, calculater } = Janith
+Janith.del.start = async(core) => {
 	if(!core.Reply || !core.Reply_key.fromMe) {
 		return
 	}
@@ -21,7 +15,7 @@ Manoj.del.start = async(core) => {
 	await core.delete(core.Reply_key)
 }
 
-Manoj.react.start = async(core) => {
+Janith.react.start = async(core) => {
 	if(!core.Reply) {
 		return
 	}
@@ -29,7 +23,7 @@ Manoj.react.start = async(core) => {
 	await core.reaction(core.input, core.Reply_key)
 }
 
-Manoj.link.start = async(core) => {
+Janith.link.start = async(core) => {
 	if(!core.input || !Url_Regex.test(core.input)) {
 		return await core.reply(string().link.need)
 	}
@@ -72,7 +66,7 @@ Manoj.link.start = async(core) => {
 	}
 }
 
-Manoj.url.start = async(core) => {
+Janith.url.start = async(core) => {
 	var data = await core.download()
 	if(data.type !== 'image' && data.type !== 'video') {
 		return core.reply(string().url.need)
@@ -86,7 +80,7 @@ Manoj.url.start = async(core) => {
 	removefile(filepath)
 }
 
-Manoj.age.start = async(core) => {
+Janith.age.start = async(core) => {
 	if(!core.input) {
 		return await core.reply(string().age.need)
 	}
@@ -103,7 +97,7 @@ Manoj.age.start = async(core) => {
 	return await core.reply(string().age.msg.bind(data.age[0], data.age[1], data.age[2], data.months, data.daa, data.hours, data.min, data.sec, data.nbday))
 }
 
-Manoj.cal.start = async(core) => {
+Janith.cal.start = async(core) => {
 	var out = core.text ? await calculater(core.text) : false
 	if(!out) {
 		return await core.reply(string().cal.need)

@@ -1,18 +1,12 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 const {
 	Youtube
-} = Ravindu
+} = Janith
 const youtube = new Youtube()
 
-Manoj.yts.start = async(core) => {
+Janith.yts.start = async(core) => {
 	try {
 		if(!core.input) {
 			return await core.send(string().youtube.yts.need)
@@ -46,7 +40,7 @@ Manoj.yts.start = async(core) => {
 	}
 }
 
-Manoj.song.start = Manoj.video.start = async(core) => {
+Janith.song.start = Janith.video.start = async(core) => {
 	var cmds = core.command === 'සින්දු' ? 'song' : core.command === 'වීඩියෝ' ? 'video' : core.command.toLowerCase()
 	try {
 		var type = youtube.getType(core.input)
@@ -78,7 +72,7 @@ Manoj.song.start = Manoj.video.start = async(core) => {
 	}
 }
 
-Manoj.ytd.start = async(core) => {
+Janith.ytd.start = async(core) => {
 	try {
 		if(core.input && core.input.have('/-/')) {
 			var input = core.input.cut('/-/')

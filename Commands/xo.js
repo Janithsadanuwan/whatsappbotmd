@@ -1,16 +1,10 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-const { XoGame } = Ravindu
+const { XoGame } = Janith
 const { Game, getSession, buttonxo, makexobutton } = XoGame
 
-Manoj.xo.start = async(core) => {
+Janith.xo.start = async(core) => {
 	if(core.input && core.input.have('startgame') && core.input.have('/')) {
 		var id = core.input.replace('startgame', '')
 		var game = false
@@ -48,7 +42,7 @@ Manoj.xo.start = async(core) => {
 				game = game.easyAi()
 			} else if(game.difficulty == 'hard') {
 				await core.sleep(1500)
-				game = game.manojExpertAI()
+				game = game.JanithExpertAI()
 			}
 
 			game = game.changeTurn()

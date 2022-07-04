@@ -1,16 +1,10 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-const { Rate, GetDB } = Ravindu
+const { Rate, GetDB } = 	Janith
 const { setlistgen, stringChange, changeChange, changelistgen, chatsettings, removechatslist, removestickercmdlist, addStickerCommand, removestickercmd } = GetDB
 const { rateus, addRate } = Rate
-Manoj.cmd.start = async(core) => {
+Janith.cmd.start = async(core) => {
 	var {
 		text,
 		img,
@@ -55,7 +49,7 @@ Manoj.cmd.start = async(core) => {
 	}
 }
 
-Manoj.set.start = async(core) => {
+Janith.set.start = async(core) => {
 	if(!core.input || !core.input.have('/ma-noj/')) {
 		if(!core.Reply || !core.Reply.message) {
 			return await core.reply(string().set.need)
@@ -88,7 +82,7 @@ Manoj.set.start = async(core) => {
 	return await core.send(string().set.error)
 }
 
-Manoj.change.start = async(core) => {
+Janith.change.start = async(core) => {
 	if(!core.input || !core.input.have('/ma-noj/')) {
 		var list = {}
 		list.title = ''
@@ -109,7 +103,7 @@ Manoj.change.start = async(core) => {
 	return await core.send(string().set.error)
 }
 
-Manoj.superchat.start = Manoj.banchat.start = Manoj.superuser.start = async(core) => {
+Janith.superchat.start = Janith.banchat.start = Janith.superuser.start = async(core) => {
 	var data = await chatsettings(core)
 	if(data.suc === true) {
 		return await core.reply(string().chat_settings.done.bind(data.chat, data.code))
@@ -134,7 +128,7 @@ Manoj.superchat.start = Manoj.banchat.start = Manoj.superuser.start = async(core
 	}
 }
 
-Manoj.remove.start = async(core) => {
+Janith.remove.start = async(core) => {
 	if(core.input && core.input.have('/-/')) {
 		var d = core.input.cut('/-/')
 		var data = await stringChange({ [d[0]]:d[1] }, 'remove')
@@ -158,7 +152,7 @@ Manoj.remove.start = async(core) => {
 	return await core.sendlist(list)
 }
 
-Manoj.stickcmd.start = async(core) => {
+Janith.stickcmd.start = async(core) => {
 	if(!core.Reply || !core.Reply.sticker) {
 		return await core.reply(string().stick_cmd.need)
 	}
@@ -173,7 +167,7 @@ Manoj.stickcmd.start = async(core) => {
 	}
 }
 
-Manoj.rmstickcmd.start = async(core) => {
+Janith.rmstickcmd.start = async(core) => {
 	if(core.input && core.input.have('remove/-/')) {
 		var d = core.input.cut('/-/')[1]
 		var data = await removestickercmd(d)
@@ -197,7 +191,7 @@ Manoj.rmstickcmd.start = async(core) => {
 	return await core.sendlist(list)
 }
 
-Manoj.alive.start = async(core) => {
+Janith.alive.start = async(core) => {
 	var {
 		text,
 		img,
@@ -213,7 +207,7 @@ Manoj.alive.start = async(core) => {
 	return await core.sendButtonimg(msg)
 }
 
-Manoj.notes.start = async(core) => {
+Janith.notes.start = async(core) => {
 	await core.reply(string().notes.start)
 	var {
 		text,
@@ -230,7 +224,7 @@ Manoj.notes.start = async(core) => {
 	return await core.sendButtonimg(msg)
 }
 
-Manoj.rate.start = async(core) => {
+Janith.rate.start = async(core) => {
 	var israte = await addRate(core.input, core.fromMe)
 	if(israte) {
 		return core.reply(string().rate.done)

@@ -1,13 +1,7 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-Manoj.scan.start = async(core) => {
+Janith.scan.start = async(core) => {
 	if(!core.input) {
 		return await core.send(string().tag.need)
 	}
@@ -23,7 +17,7 @@ Manoj.scan.start = async(core) => {
 	await core.send('```' + core.input + '``` \n' + string().tag.unsuc)
 }
 
-Manoj.tag.start = async(core) => {
+Janith.tag.start = async(core) => {
 	if(!core.isgroup || core.input == 'admin') {
 		return
 	}
@@ -40,7 +34,7 @@ Manoj.tag.start = async(core) => {
 	})
 }
 
-Manoj.tagadmin.start = async(core) => {
+Janith.tagadmin.start = async(core) => {
 	if(!core.isgroup) {
 		return
 	}

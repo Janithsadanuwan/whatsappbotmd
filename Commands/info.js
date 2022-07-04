@@ -1,13 +1,7 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-Manoj.info.start = async(core) => {
+Janith.info.start = async(core) => {
 	if(core.Reply || !core.isgroup || core.mention) {
 		user = core.Reply ? core.Reply.jid : core.mention ? core.mention.fix()[0] : core.jid
 		var bisdata = await core.profileUpdate({
@@ -64,12 +58,12 @@ Manoj.info.start = async(core) => {
 	}
 }
 
-Manoj.jid.start = async(core) => {
+Janith.jid.start = async(core) => {
 	var jid = core.Reply ? core.Reply.jid : core.mention ? core.mention.fix()[0] : core.jid
 	await core.reply(string().info.jid.msg.bind(jid))
 }
 
-Manoj.wame.start = async(core) => {
+Janith.wame.start = async(core) => {
 	if(core.Reply || !core.isgroup || core.mention) {
 		jid = core.Reply ? core.Reply.jid : core.mention ? core.mention.fix()[0] : core.jid
 		return await core.send(string().info.wame.msg.bind(jid.cut('@')[0].cut(':')[0], jid.cut('@')[0].cut(':')[0]), false, {

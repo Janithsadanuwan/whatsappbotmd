@@ -1,18 +1,12 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-const key = 'RavinduManoj'
+const key = 'Janithsadanuwan'
 const {
 	cryptdata
 } = Ravindu
 
-Manoj.joke.start = async(core) => {
+Janith.joke.start = async(core) => {
 	var res, data, all, msg = ''
 	try {
 		if(!core.text) {
@@ -41,7 +35,7 @@ Manoj.joke.start = async(core) => {
 	}
 }
 
-Manoj.quote.start = async(core) => {
+Janith.quote.start = async(core) => {
 	const web = await core.webdata(string().joke.quote.api)
 	if(web?.content) {
 		return await core.reply(string().joke.quote.msg.bind(web.content, web.author))
@@ -50,7 +44,7 @@ Manoj.quote.start = async(core) => {
 	return await core.reply(string().joke.quote.err)
 }
 
-Manoj.encrypt.start = async(core) => {
+Janith.encrypt.start = async(core) => {
 	if(!core.Reply.text || !core.input) {
 		return await core.send(string().crypt.enneed)
 	}
@@ -59,7 +53,7 @@ Manoj.encrypt.start = async(core) => {
 	await core.reply(enc)
 }
 
-Manoj.decrypt.start = async(core) => {
+Janith.decrypt.start = async(core) => {
 	if(!core.Reply.text || !core.input) {
 		return await core.send(string().crypt.deneed)
 	}
@@ -68,7 +62,7 @@ Manoj.decrypt.start = async(core) => {
 	await core.reply(dnc)
 }
 
-Manoj.dict.start = async(core) => {
+Janith.dict.start = async(core) => {
 	if(!core.text) {
 		return await core.send(string().dict.need)
 	}

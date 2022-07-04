@@ -1,19 +1,13 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 const {
 	webdl
-} = require('../store/manoj/')
+} = require('../store/janith/')
 
 var ffmpeg = require('fluent-ffmpeg')
 
-Manoj.mp3a.start = async(core) => {
+Janith.mp3a.start = async(core) => {
 	try {
 		var data = await core.download()
 		if(data.type !== 'video') {
@@ -24,57 +18,57 @@ Manoj.mp3a.start = async(core) => {
 		var datas = await core.bufferType(data)
 		datas.ext = datas.ext.replace('.', '')
 		var ext = datas.ext === 'bin' ? 'mp4' : datas.ext
-		fs.writeFileSync('./manoj.' + ext, data.buffer)
+		fs.writeFileSync('./Janith.' + ext, data.buffer)
 
-		ffmpeg('./manoj.' + ext)
+		ffmpeg('./Janith.' + ext)
 			.format('mp3')
-			.save('./manoj.mp3')
+			.save('./Janith.mp3')
 			.on('error', err => {
 				return
 			})
 			.on('end', async() => {
-				await core.mediasend('audio', './manoj.mp3')
+				await core.mediasend('audio', './Janith.mp3')
 				await core.delete(up)
-				removefile('./manoj.' + ext)
-				removefile('./manoj.mp3')
+				removefile('./Janith.' + ext)
+				removefile('./Janith.mp3')
 			})
 	} catch(e) {
 		console.log(e)
 	}
 }
 
-Manoj.photo.start = async(core) => {
+Janith.photo.start = async(core) => {
 	var data = await core.download()
 	if(data.type !== 'sticker' || core.Reply.isAnimated) {
 		return await core.send(string().converter.sticker_need_n)
 	}
 
 	var up = await core.send(string().converter.sticker)
-	fs.writeFileSync('./manoj.webp', data.buffer)
-	mediasv('./manoj.webp')
+	fs.writeFileSync('./Janith.webp', data.buffer)
+	mediasv('./Janith.webp')
 		.fromFormat('webp_pipe')
-		.save('./manoj.jpg')
+		.save('./Janith.jpg')
 		.on('error', err => {
 			return
 		})
 		.on('end', async() => {
-			await core.mediasend('image', './manoj.jpg', dataDb.caption.setup(core))
+			await core.mediasend('image', './Janith.jpg', dataDb.caption.setup(core))
 			await core.delete(up)
-			removefile('./manoj.webp')
-			removefile('./manoj.jpg')
+			removefile('./Janith.webp')
+			removefile('./Janith.jpg')
 		})
 }
 
-Manoj.vsticker.start = async(core) => {
+Janith.vsticker.start = async(core) => {
 	var data = await core.download()
 	if(data.type !== 'sticker' || !core.Reply.isAnimated) {
 		return await core.send(string().converter.sticker_need)
 	}
 
 	var up = await core.send(string().converter.anim)
-	fs.writeFileSync('./manoj2.webp', data.buffer)
-	var { result } = await webp2mp4File('./manoj2.webp')
+	fs.writeFileSync('./Janith2.webp', data.buffer)
+	var { result } = await webp2mp4File('./Janith2.webp')
 	await core.mediasend('video', result, dataDb.caption.setup(core))
 	await core.delete(up)
-	removefile('./manoj2.webp')
+	removefile('./Janith2.webp')
 }

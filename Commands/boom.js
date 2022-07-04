@@ -1,17 +1,11 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 const {
 	BoomLoop
-} = Ravindu
+} = Janith
 
-Manoj.boom.start = async(core) => {
+Janith.boom.start = async(core) => {
 	var boom = new BoomLoop(core)
 	if(core.input === 'stop') {
 		boom.StopBooming()

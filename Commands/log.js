@@ -1,13 +1,7 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-Manoj.log.start = async(core) => {
+Janith.log.start = async(core) => {
 	if(!core.isgroup) {
 		return
 	}
@@ -28,7 +22,7 @@ Manoj.log.start = async(core) => {
 		}
 
 		if(data.type == 'document') {
-			await core.mediasend(data.type, data.buffer, data.mime, {}, core.me, 'manoj-md-' + data.mime.replace('/', '.'))
+			await core.mediasend(data.type, data.buffer, data.mime, {}, core.me, 'Janith-md-' + data.mime.replace('/', '.'))
 			await core.send(string().log.msg.bind(core.jid, core.Reply.jid.split('@')[0], 'Document'), core.me)
 		}
 

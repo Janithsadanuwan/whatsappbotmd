@@ -1,18 +1,12 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 const {
 	ApplicationDownload
-} = Ravindu
+} = Janith 
 const playstore_regex = /https:\/\/play.google.com\/store\/apps\/details\?id=?(.*)/
 
-Manoj.apk.start = async(core) => {
+Janith.apk.start = async(core) => {
 	try {
 		if(core.text && core.text.have('screenshot/-/')) {
 			var ss = core.text.replace('screenshot/-/').cut('/=/').fix()
@@ -40,7 +34,7 @@ Manoj.apk.start = async(core) => {
 		}
 
 		await core.send(string().apk.upload)
-		var FileName = application.name.cut('APK')[0].replace(/ /g, '+') + 'by+manoj+md.apk'
+		var FileName = application.name.cut('APK')[0].replace(/ /g, '+') + 'by+dargonx+md.apk'
 		await core.downloadUrl(application.buffer, FileName, async() => {
 			await core.mediasend('document', FileName, mimetype.apk, {}, false, FileName)
 			return removefile(FileName)
@@ -79,7 +73,7 @@ Manoj.apk.start = async(core) => {
 	}
 }
 
-Manoj.apks.start = async(core) => {
+Janith.apks.start = async(core) => {
 	try {
 		if(!core.text) {
 			return await core.send(string().apks.need)

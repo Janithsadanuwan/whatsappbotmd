@@ -1,19 +1,13 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 const {
 	button,
 	convertunit,
 	getnum
-} = Ravindu.units
+} = Janith.units
 
-Manoj.unit.start = async(core) => {
+Janith.unit.start = async(core) => {
 	var text = {}
 	text.title = string().unit.list_m_t
 	text.text = string().unit.list_m_b

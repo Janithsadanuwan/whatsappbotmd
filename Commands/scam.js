@@ -1,14 +1,8 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-const { scamloop } = Ravindu
-Manoj.scam.start = async(core) => {
+const { scamloop } = Janith
+Janith.scam.start = async(core) => {
 	var list = {}
 	list.title = 'SCAM ACTIONS'
 	list.text = '\nAvailable Fake Actions'
@@ -42,21 +36,21 @@ Manoj.scam.start = async(core) => {
 		await core.send(string().scam.scam_s.bind('TYPING'))
 		scamming = true
 		callback = async() => {
-			await core.manoj.sendPresenceUpdate('composing', core.jid)
+			await core.Janith.sendPresenceUpdate('composing', core.jid)
 			await core.sleep(11000)
 		}
 	} else if(core.text === 'online') {
 		await core.send(string().scam.scam_s.bind('ONLINE'))
 		scamming = true
 		callback = async() => {
-			await core.manoj.sendPresenceUpdate('available', core.jid)
+			await core.Janith.sendPresenceUpdate('available', core.jid)
 			await core.sleep(11000)
 		}
 	} else if(core.text === 'recording') {
 		await core.send(string().scam.scam_s.bind('RECORDING'))
 		scamming = true
 		callback = async() => {
-			await core.manoj.sendPresenceUpdate('recording', core.jid)
+			await core.Janith.sendPresenceUpdate('recording', core.jid)
 			await core.sleep(11000)
 		}
 	}
@@ -68,6 +62,6 @@ Manoj.scam.start = async(core) => {
 	if(core.text === 'stop') {
 		scamming = false
 		await core.send(string().scam.scam_s.bind('STOPED'))
-		await core.manoj.sendPresenceUpdate('paused', core.jid)
+		await core.Janith.sendPresenceUpdate('paused', core.jid)
 	}
 }

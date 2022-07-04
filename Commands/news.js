@@ -1,16 +1,10 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
-const { load } = require('../store/manoj/')
-const { ipDetect } = Ravindu
+const { load } = require('../store/janith/')
+const { ipDetect } = Janith
 
-Manoj.news.start = async(core) => {
+Janith.news.start = async(core) => {
 	if(!core.text) {
 		return await core.reply(string().news.news.need)
 	}
@@ -31,7 +25,7 @@ Manoj.news.start = async(core) => {
 	}
 }
 
-Manoj.show.start = async(core) => {
+Janith.show.start = async(core) => {
 	if(!core.text) {
 		return await core.reply(string().news.show.need)
 	}
@@ -45,7 +39,7 @@ Manoj.show.start = async(core) => {
 	}
 }
 
-Manoj.movie.start = async(core) => {
+Janith.movie.start = async(core) => {
 	if(!core.text) {
 		return await core.reply(string().news.film.need)
 	}
@@ -61,7 +55,7 @@ Manoj.movie.start = async(core) => {
 		web.Production, web.imdbRating, web.imdbVotes))
 }
 
-Manoj.ip.start = async(core) => {
+Janith.ip.start = async(core) => {
 	if(!core.input) {
 		return await core.reply(string().news.ip.need)
 	}
@@ -74,7 +68,7 @@ Manoj.ip.start = async(core) => {
 	return await core.reply(string().news.show.err)
 }
 
-Manoj.neko.start = async(core) => {
+Janith.neko.start = async(core) => {
 	if(!core.text) {
 		return await core.reply(string().download.needt)
 	}
@@ -88,7 +82,7 @@ Manoj.neko.start = async(core) => {
 	}
 }
 
-Manoj.weather.start = async(core) => {
+Janith.weather.start = async(core) => {
 	if(!core.text) {
 		return await core.reply(string().weather.need)
 	}

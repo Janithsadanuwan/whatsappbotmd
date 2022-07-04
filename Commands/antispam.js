@@ -1,17 +1,11 @@
 /*
-Manoj Md Whatsapp Bot
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
-Youtube: https://youtube.com/c/TechToFuture
-
-Coded By Ravindu Manoj
 */
 const {
 	Antispam
-} = Ravindu
+} = Janith
 
-Manoj.antispam.start = async(core) => {
+Janith.antispam.start = async(core) => {
 	var protection = new Antispam(core),
 		block_sender = false
 	if(!await protection.needActive()) {

@@ -2,7 +2,7 @@
 
 */
 return
-const bash = require("@ravindu01manoj/bash-js")
+const bash = require("@janithsadanuwan/bash-js")
 const command = "node manoj.js"
 const startFileWithNode = require("../indexstart.js")
 

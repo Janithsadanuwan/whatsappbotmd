@@ -4,9 +4,9 @@ dragonx md multi device whatsapp bot
 coded by janithsadanuwan
 */
 
-const { EphotoBest, emojimix, ph, emojiToPng, attplist, toAttp, fancy } = Ravindu
+const { EphotoBest, emojimix, ph, emojiToPng, attplist, toAttp, fancy ,RGBTEXT} = Janith
 
-Manoj.logoA.start = async(core) => {
+Janith.logoA.start = async(core) => {
 	if(!core.text) {
 		return await core.send(string().logo.logoA.need)
 	}
@@ -39,7 +39,7 @@ Manoj.logoA.start = async(core) => {
 
 }
 
-Manoj.logoB.start = async(core) => {
+Janith.logoB.start = async(core) => {
 	if(!core.text) {
 		return await core.send(string().logo.logoB.need)
 	}
@@ -75,7 +75,7 @@ Manoj.logoB.start = async(core) => {
 	})
 }
 
-Manoj.logoC.start = async(core) => {
+Janith.logoC.start = async(core) => {
 	if(!core.text) {
 		return await core.send(string().logo.logoA.need)
 	}
@@ -100,7 +100,7 @@ Manoj.logoC.start = async(core) => {
 	})
 }
 
-Manoj.attpA.start = async(core) => {
+Janith.attpA.start = async(core) => {
 	try {
 		if(!core.text) {
 			return await core.send(string().attp.attpB.need)
@@ -132,7 +132,7 @@ Manoj.attpA.start = async(core) => {
 	}
 }
 
-Manoj.attpB.start = async(core) => {
+Janith.attpB.start = async(core) => {
 	if(!core.text) {
 		return await core.send(string().attp.attpB.need)
 	}
@@ -165,7 +165,7 @@ Manoj.attpB.start = async(core) => {
 
 }
 
-Manoj.attpC.start = async(core) => {
+Janith.attpC.start = async(core) => {
 	if(!core.text) {
 		return await core.send(string().attp.attpC.need)
 	}
@@ -202,7 +202,7 @@ Manoj.attpC.start = async(core) => {
 
 }
 
-Manoj.attpD.start = async(core) => {
+Janith.attpD.start = async(core) => {
 	if(!core.text) {
 		return await core.send(string().attp.attpB.need)
 	}
@@ -227,7 +227,7 @@ Manoj.attpD.start = async(core) => {
 
 }
 
-Manoj.png.start = async(core) => {
+Janith.png.start = async(core) => {
 	if(!core.input || !emojitoArray(core.input)[0]) {
 		return await core.reply(string().logo.png.need)
 	}
@@ -245,7 +245,7 @@ Manoj.png.start = async(core) => {
 	return await core.sendlist(text)
 }
 
-Manoj.fancy.start = async(core) => {
+Janith.fancy.start = async(core) => {
 	if(!core.text) {
 		return core.reply(string().logo.fancy.need)
 	}
@@ -262,7 +262,7 @@ Manoj.fancy.start = async(core) => {
 	return await core.sendlist(list)
 }
 
-Manoj.emojimix.start = async(core) => {
+Janith.emojimix.start = async(core) => {
 	var emo = emojitoArray(core.input)
 	if(!emo[0] || !emo[1]) {
 		return await core.reply(string().attp.emojimix.need)
@@ -280,4 +280,4 @@ Manoj.emojimix.start = async(core) => {
 		return await core.reply(string().attp.emojimix.error.bind(emo[0], emo[1]))
 	}
 }
-//Manoj.ph.start = async (core) => {await ph(core)}
+//Janith.ph.start = async (core) => {await ph(core)}
